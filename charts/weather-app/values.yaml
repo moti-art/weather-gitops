@@ -1,0 +1,23 @@
+# Global settings (if needed)
+global:
+  environment: dev
+
+# Backend Configuration
+backend:
+  replicaCount: 1
+  image:
+    repository: motinet/weather-backend
+    tag: "0bd28653220416fff1e332189ec810a0d2fb7bc1" # נחליף ל-SHA בהמשך
+  service:
+    port: 5000
+  env:
+    openweather_api_key_secret_name: weather-secrets
+
+# Frontend Configuration
+frontend:
+  replicaCount: 1
+  image:
+    repository: motinet/weather-frontend
+    tag: "f8b84854b2892b1703346e9d2da892e6eb8258f7"
+  service:
+    port: 5001
