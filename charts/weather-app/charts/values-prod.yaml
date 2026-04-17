@@ -1,0 +1,6 @@
+global:
+  environment: prod
+backend:
+  replicaCount: 3  # כאן ההבדל!
+frontend:
+  replicaCount: 3

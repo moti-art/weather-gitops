@@ -1,0 +1,6 @@
+global:
+  environment: dev
+backend:
+  replicaCount: 1
+frontend:
+  replicaCount: 1
