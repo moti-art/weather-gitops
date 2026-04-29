@@ -7,7 +7,7 @@ backend:
   replicaCount: 1
   image:
     repository: motinet/weather-backend
-    tag: "0bd28653220416fff1e332189ec810a0d2fb7bc1" # נחליף ל-SHA בהמשך
+    tag: "7a3f2b1" #
   service:
     port: 5000
   env:
