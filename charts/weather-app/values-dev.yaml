@@ -9,7 +9,7 @@ backend:
 frontend:
   replicaCount: 1
   image:
-    tag: "initial"
+    tag: "d5f0e2c40bae9344511d3bab98d1d659d0c115bf"
 
 tracker:
   image:
