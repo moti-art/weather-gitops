@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: weather-backend-svc
 spec:
-  type: ClusterIP # גישה פנימית בלבד בתוך הקלאסטר
+  type: ClusterIP
   selector:
     app: weather-backend
   ports:
@@ -18,11 +18,11 @@ kind: Service
 metadata:
   name: weather-frontend-svc
 spec:
-  type: NodePort # מאפשר לנו לגשת לאפליקציה מבחוץ (דרך Minikube)
+  type: NodePort
   selector:
     app: weather-frontend
   ports:
     - protocol: TCP
-      port: 5001
+      port: 80
       targetPort: 5001
-      nodePort: 30001 # פורט קבוע שתוכל להקיש בדפדפן
+      nodePort: 30001
