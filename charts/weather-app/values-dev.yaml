@@ -4,7 +4,7 @@ global:
 backend:
   replicaCount: 1
   image:
-    tag: "bcd449d44beff202130b22be96d0fe9403fcd5b1"
+    tag: "13f76ce2b9ef7da6c6465d5ec3dfe12f3348fcde"
 
 frontend:
   replicaCount: 1
