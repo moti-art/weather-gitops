@@ -21,3 +21,12 @@ frontend:
     tag: "f8b84854b2892b1703346e9d2da892e6eb8258f7"
   service:
     port: 5001
+
+    # Tracker Configuration
+tracker:
+  replicaCount: 1
+  image:
+    repository: motinet/weather-tracker
+    tag: "latest" # זה ישתנה אוטומטית ע"י ה-CI
+  service:
+    port: 5001

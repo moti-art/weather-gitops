@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: weather-tracker
-  namespace: default
 spec:
-  replicas: 1
+  replicas: {{ .Values.tracker.replicaCount }}
   selector:
     matchLabels:
       app: weather-tracker
@@ -15,23 +14,24 @@ spec:
     spec:
       containers:
       - name: weather-tracker
-        image: motinet/weather-tracker:latest
+        # המשתנים נמשכים מהמבנה החדש שהוספנו ל-values.yaml
+        image: "{{ .Values.tracker.image.repository }}:{{ .Values.tracker.image.tag }}"
         ports:
-        - containerPort: 5001
+        - containerPort: {{ .Values.tracker.service.port }}
         resources:
           limits:
             memory: "128Mi"
             cpu: "200m"
+        # אם הטרקר צריך הרשאות ל-AWS (IAM Role), קוברנטיס ידע להשתמש בהן כאן
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: weather-tracker
-  namespace: default
 spec:
   selector:
     app: weather-tracker
   ports:
   - protocol: TCP
-    port: 5001
-    targetPort: 5001
+    port: {{ .Values.tracker.service.port }}
+    targetPort: {{ .Values.tracker.service.port }}

@@ -4,3 +4,7 @@ backend:
   replicaCount: 1
 frontend:
   replicaCount: 1
+
+  tracker:
+  image:
+    tag: "initial" # ה-CI יחפש את השורה הזו
