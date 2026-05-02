@@ -1,10 +1,16 @@
 global:
   environment: dev
+
 backend:
   replicaCount: 1
+  image:
+    tag: "initial"
+
 frontend:
   replicaCount: 1
+  image:
+    tag: "initial"
 
-  tracker:
+tracker:
   image:
     tag: "779cc0f02e676b6dad063244e7fa542ff50318f9"
