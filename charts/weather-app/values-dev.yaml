@@ -13,4 +13,4 @@ frontend:
 
 tracker:
   image:
-    tag: "779cc0f02e676b6dad063244e7fa542ff50318f9"
+    tag: "afd77b4d673029c7a4eb51ba8b73673c0c13233d"
