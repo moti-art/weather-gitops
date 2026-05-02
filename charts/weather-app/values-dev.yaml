@@ -4,13 +4,13 @@ global:
 backend:
   replicaCount: 1
   image:
-    tag: "initial"
+    tag: "13f76ce2b9ef7da6c6465d5ec3dfe12f3348fcde"
 
 frontend:
   replicaCount: 1
   image:
-    tag: "initial"
+    tag: "d5f0e2c40bae9344511d3bab98d1d659d0c115bf"
 
 tracker:
   image:
-    tag: "afd77b4d673029c7a4eb51ba8b73673c0c13233d"
+    tag: "923acd3a1c6b43957d2c205d1ea28b226c9324ba"
